@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "aeaf0ef4-f9c7-4358-ad49-e12371a5dfcd",
+		"name": "train_java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16190218"
+	},
+	"item": [
+		{
+			"name": "get_applicant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/applicant/api/application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applicant",
+						"api",
+						"application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_applicant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Son\",\n    \"email\": \"son@gmail.com\",\n    \"gitUser\": \"githaha\",\n    \"projects\": [\n        {\n            \"name\": \"REACT\",\n            \"employmentMode\": \"EMPLOYED\",\n            \"capacityStatus\": \"FULL_TIME\",\n            \"durationInMonths\": 2,\n            \"startYear\": 2020,\n            \"role\": \"admin\",\n            \"teamSize\": 4,\n            \"linkRepo\": \"http://github.com/repo\",\n            \"linkLive\": \"http://live.com\"\n        },\n        {\n            \"name\": \"VUE\",\n            \"employmentMode\": \"EMPLOYED\",\n            \"capacityStatus\": \"FULL_TIME\",\n            \"durationInMonths\": 2,\n            \"startYear\": 2020,\n            \"role\": \"admin\",\n            \"teamSize\": 4,\n            \"linkRepo\": \"http://github.com/repo\",\n            \"linkLive\": \"http://live.com\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/applicant/api/application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applicant",
+						"api",
+						"application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"email\": \"son@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzMTExMUBnbWFpbC5jb20iLCJleHAiOjE2NTkzMTA1MTQsImlhdCI6MTY1OTI4MTcxNH0.EKTgZdCg9IaeU8dtV8Lq_BR0ffwZ41-qorqdSWRvSmkqIVhA8J0rtVkkMPSOqs2U7OMPHwgiQvPWNGT-3DpkBQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"email\": \"s1111@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"son\",\n    \"email\": \"son@gmail.com\",\n    \"password\": \"password\",\n    \"picture\": \"picture\",\n    \"roles\": [\n        {\n        \"roleName\": \"ADMIN\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_applicant",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Son\",\n    \"email\": \"sonhh@gmail.com\",\n    \"gitUser\": \"sonhh\",\n    \"projects\": [\n        {\n            \"name\": \"SON\",\n            \"employmentMode\": \"EMPLOYED\",\n            \"capacityStatus\": \"FULL_TIME\",\n            \"durationInMonths\": 2,\n            \"startYear\": 2020,\n            \"role\": \"admin\",\n            \"teamSize\": 4,\n            \"linkRepo\": \"http://github.com/repo\",\n            \"linkLive\": \"http://live.com\"\n        },\n        {\n            \"name\": \"CSS\",\n            \"employmentMode\": \"EMPLOYED\",\n            \"capacityStatus\": \"FULL_TIME\",\n            \"durationInMonths\": 2,\n            \"startYear\": 2020,\n            \"role\": \"admin\",\n            \"teamSize\": 4,\n            \"linkRepo\": \"http://github.com/repo\",\n            \"linkLive\": \"http://live.com\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/applicant/api/application/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applicant",
+						"api",
+						"application",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_applicant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/applicant/api/application/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applicant",
+						"api",
+						"application",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export_pdf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/applicant/api/application/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applicant",
+						"api",
+						"application",
+						"export"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
